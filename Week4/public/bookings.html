@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="js/script.js"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <style>
+    .navy-blue {
+          background-color: #000080 !important; /* Navy blue color */
+        }
+        .white-text {
+          color: #ffffff !important; /* White text color */
+        } 
+
+    .card-container {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="nav-wrapper navy-blue">
+      <a href="#" class="brand-logo">PawFinders</a>
+      <ul id="nav-mobile" class="right hide-on-med-and-down">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="gallery.html">Gallery</a></li>
+        <li><a href="bookings.html">View Booking</a></li>
+        <li><a href="services.html">Services</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <h1>View Bookings</h1>
+    <button id="viewAllBookings" type="button" class="waves-effect waves-light btn">View All Bookings</button>
+    <div id="bookingDetails"></div>
+    <!-- Form to view specific booking -->
+  <form id="specificBookingForm">
+    <div class="input-field inline">
+      <input id="specificBookingName" type="text">
+      <label for="specificBookingName">Enter Name</label>
+    </div>
+    <button id="viewSpecificBooking" type="button" class="waves-effect waves-light btn">View Specific Booking</button>
+    
+  </form>
+  <br>
+  <table id="bookingTable">
+    <thead>
+      <tr>
+        <th>Name</th>
+        <th>Phone</th>
+        <th>Date</th>
+        <th>Time</th>
+      </tr>
+    </thead>
+    <tbody id="bookingTableBody">
+      <!-- Booking rows will be appended here -->
+    </tbody>
+  </table>
+    
+    <!-- Booking cards will be inserted here by script.js -->
+  </div>
+  <script src="js/script.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+  <footer class="page-footer navy-blue">
+    <div class="container">
+      <div class="row">
+        <div class="col l6 s12">
+          <h5 class="white-text">PawFinders</h5>
+          <p class="grey-text text-lighten-4">A Friendly Pet Service</p>
+        </div>
+        <div class="col l4 offset-l2 s12">
+          <h5 class="white-text">Company</h5>
+          <ul>
+            <li><a class="grey-text text-lighten-3" href="#!">About Us</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Gallery</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Contact Us</a></li>
+            <li><a class="grey-text text-lighten-3" href="#!">Leadership</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="footer-copyright">
+      <div class="container">
+      © 2024 Copyright Text
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
