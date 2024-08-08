@@ -1,37 +1,3 @@
-// const express= require("express");
-// const bodyParser = require('body-parser');
-// const { Booking,runDBConnection } = require("./model");
-
-// const app= express();
-
-// runDBConnection();
-
-// app.use(bodyParser.json());
-// app.use(express.static('public'));
-
-// app.post('/booking', async (req, res) => {
-//     try {
-//         const { name, phone, date, time } = req.body;
-//         const newBooking = new Booking({ name, phone, date, time });
-//         await newBooking.save();
-//         res.status(200).send('Booking confirmed');
-//     } catch (error) {
-//         console.log('Error saving booking:', error);
-//         res.status(500).send('Error saving booking ' + error.message);
-//     }
-// });
-
-
-//     // app.get('/booking', (req,res) => {
-//     //     console.log(req.body)
-//     // });
-
-//     const port=3040;
-//     app.listen(port,()=> {
-//         console.log("hello i'm listening to port "+port);
-        
-//     })
-
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
