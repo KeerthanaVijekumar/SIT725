@@ -39,8 +39,9 @@
     <ul id="nav-mobile" class="right hide-on-med-and-down">
       <li><a >Home</a></li>
       <li><a href="galery.html">Gallery</a></li>
+      <li><a href="bookings.html">View Booking</a></li>
       <li><a href="badges.html">Services</a></li>
-      <li><a href="collapsible.html">About Us Us</a></li>
+      <li><a href="collapsible.html">About Us</a></li>
       <li><a >Contact Us</a></li>
     </ul>
   </div>
@@ -56,6 +57,9 @@
         <span class="card-title">Pack Walk</span>
         <p>Time: 1 hour <br> Cost: $20</p>
       </div>
+      <div class="col s12 center-align">
+        <a class="waves-effect waves-light btn click-me-button modal-trigger" id="clickMeButton" data-target="modal1"><i class="material-icons left">auto_fix_high</i>Book Me</a>
+      </div>
     </div>
     <div class="card">
       <div class="card-image">
@@ -65,6 +69,9 @@
         <span class="card-title">Solo Walk</span>
         <p>Time: 1 hour <br> Cost: $15</p>
       </div>
+      <div class="col s12 center-align">
+        <a class="waves-effect waves-light btn click-me-button modal-trigger" id="clickMeButton" data-target="modal1"><i class="material-icons left">auto_fix_high</i>Book Me</a>
+      </div>
     </div>
     <div class="card">
       <div class="card-image">
@@ -73,9 +80,48 @@
       <div class="card-content">
         <span class="card-title">Pooch Sleepover</span>
         <p>Time: 8 hours <br> Cost: $50</p>
+        <div class="col s12 center-align">
+          <a class="waves-effect waves-light btn click-me-button modal-trigger" id="clickMeButton" data-target="modal1"><i class="material-icons left">auto_fix_high</i>Book Me</a>
+        </div>
       </div>
     </div>
   </div>
+
+  <div id="modal1" class="modal modal-fixed-footer">
+    <div class="row modal-content">
+      <form class="col s12">
+        <div class="row">
+          <div class="input-field col s6">
+            <input id="name" type="text" class="validate">
+            <label for="name">Name</label>
+          </div>
+          <div class="input-field col s6">
+            <input id="phone" type="text" class="validate">
+            <label for="phone">Phone</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="date" type="date" class="validate">
+            <label for="date">Date</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <input id="time" type="time" class="validate">
+            <label for="time">Time</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12 center-align">
+            <a class="waves-effect waves-light btn" id="formSubmit">submit</a>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="js/script.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
   <footer class="page-footer navy-blue">
     <div class="container">
