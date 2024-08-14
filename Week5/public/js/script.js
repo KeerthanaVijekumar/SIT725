@@ -36,7 +36,7 @@ $(document).ready(function () {
     // Function to fetch and display booking details
     function fetchAndDisplayBookings() {
         $.ajax({
-            url: '/bookings',
+            url: '/api/bookings',
             method: 'GET',
             success: function (data) {
                 console.log('Data received:', data); // Log the response to inspect its structure
@@ -61,6 +61,7 @@ $(document).ready(function () {
                     });
                 } else {
                     console.error('Unexpected data format:', data);
+                    console.log(data);
                 }
             },
             error: function (error) {

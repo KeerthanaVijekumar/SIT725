@@ -16,6 +16,16 @@
           .white-text {
             color: #ffffff !important; /* White text color */
           }
+          .container {
+      display: grid;
+      grid-template-columns: auto 1fr; /* Two columns: auto width for the image and flexible width for the paragraph */
+      gap: 20px; /* Space between the photo and the paragraph */
+      align-items: center; /* Centers items vertically */
+    }
+    .container img {
+      width: 300px; /* Set the desired width of the image */
+      height: auto; /* Maintain aspect ratio */
+    }
         </style>
       </head>
 <body>
@@ -23,19 +33,35 @@
         <div class="nav-wrapper navy-blue" >
           <a href="#" class="brand-logo">PawFinders</a>
           <ul id="nav-mobile" class="right hide-on-med-and-down">
-            <li><a >Home</a></li>
-            <li><a href="galery.html">Gallery</a></li>
-            <li><a href="badges.html">Services</a></li>
-            <li><a href="collapsible.html">About Us Us</a></li>
-            <li><a >Contact Us</a></li>
+            <li><a href="/">Home</a></li>
+                <li><a href="galery.html">Gallery</a></li>
+                <li><a href="bookings.html">View Booking</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a >Contact Us</a></li>
           </ul>
         </div>
       </nav>
-<h1> Welcome </h1>
-<video width="600" height="600" controls>
-    <source src="src/video.mp4" type="video/mp4">
-    Your browser does not support the video tag.
-  </video>
+<h1> About Us </h1>
+<div class="container">
+    <img src="src/me.jpg" alt="Sample Photo">
+    <p>
+        I'm Keerthana Vijekumar, a beloved dog mom. Due
+        to my higher studies, I had to leave my pet. I really
+        miss him, and the regret I have for being unable to
+        take care of him deeply hits me.
+        Having a pet is not a choice; it's a responsibility.
+        Within our busy schedules, it's really difficult to
+        allocate time to take care of our beloved pets. For
+        someone who is busy and cannot be with their
+        pets, there is a need for a platform like PawFinders
+        to ensure their pets are in good hands and getting
+        their needs met.
+        That's what PawFinders is all about: making sure to
+        provide for the needs of our beloved fur babies.
+    </p>
+    <br>
+  </div>
   <footer class="page-footer navy-blue">
     <div class="container">
       <div class="row">
