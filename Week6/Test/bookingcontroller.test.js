@@ -32,7 +32,7 @@ describe('Booking Controller', () => {
         const response = await request(app)
             .post('/api/bookings')
             .send({
-                name: 'John Doe',
+                name: 'Kay',
                 phone: '1234567890',
                 date: '2024-09-01',
                 time: '10:00'
@@ -44,7 +44,7 @@ describe('Booking Controller', () => {
 
         // Check response body with additional fields and normalized date
         const expectedResponse = {
-            name: 'John Doe',
+            name: 'Kay',
             phone: '1234567890',
             date: '2024-09-01T00:00:00.000Z', // Match the format returned by MongoDB
             time: '10:00',
@@ -70,7 +70,7 @@ describe('GET /api/bookings', () => {
 
     it('should return all bookings and status 200', async () => { 
         const bookings = [
-            { name: 'John Doe', 
+            { name: 'Kay', 
             phone: '1234567890', 
             date: '2024-09-01T00:00:00.000Z',
             time: '10:00'
@@ -133,7 +133,7 @@ describe('GET /api/bookings/:name', () => {
     });
 
     it('should return the specific booking by name and status 200', async () => {
-        const specificName = 'John Doe';
+        const specificName = 'Kay';
         const booking = {
             name: specificName,
             phone: '1234567890',

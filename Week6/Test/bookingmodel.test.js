@@ -31,7 +31,7 @@ describe('Booking Model', () => {
 
     it('should find a booking by name', async () => {
         const bookingData = {
-            name: 'John Doe',
+            name: 'Kay',
             phone: '1234567890',
             date: '2024-09-01T00:00:00.000Z',
             time: '10:00'
@@ -40,10 +40,10 @@ describe('Booking Model', () => {
         const booking = new Booking(bookingData);
         await booking.save();
 
-        const foundBooking = await Booking.findOne({ name: 'John Doe' });
+        const foundBooking = await Booking.findOne({ name: 'Kay' });
 
         expect(foundBooking).to.not.be.null;
-        expect(foundBooking.name).to.equal('John Doe');
+        expect(foundBooking.name).to.equal('Kay');
     });
 });
 

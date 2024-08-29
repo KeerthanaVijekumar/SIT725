@@ -31,7 +31,7 @@ describe('Booking Routes', function () {
   // Test for POST /api/bookings
   it('should create a new booking on POST /api/bookings', async function () {
     const newBooking = {
-      name: 'John Doe',
+      name: 'Kay',
       phone: '1234567890',
       date: '2024-09-01T00:00:00.000Z',
       time: '10:00',
@@ -43,14 +43,14 @@ describe('Booking Routes', function () {
       .send(newBooking)
       .expect(201);
 
-    expect(response.body.name).to.equal('John Doe');
+    expect(response.body.name).to.equal('Kay');
     expect(response.body.phone).to.equal('1234567890');
   });
 
   // Test for invalid data on POST /api/bookings
 it('should return 400 for invalid data on POST /api/bookings', async function () {
     const invalidBooking = {
-        name: 'John Doe', // Missing other fields
+        name: 'Kay', // Missing other fields
     };
 
     const response = await request(app)
@@ -94,8 +94,8 @@ it('should return 404 for non-existing booking on GET /api/bookings/:name', asyn
   // Test for GET /api/bookings
   it('should return all bookings on GET /api/bookings', async function () {
     await Booking.insertMany([
-      { name: 'John Doe', phone: '1234567890', date: '2024-09-01T00:00:00.000Z', time: '10:00', test: true },
-      { name: 'Jane Doe', phone: '0987654321', date: '2024-10-01T00:00:00.000Z', time: '14:00', test: true }
+      { name: 'Kay', phone: '1234567890', date: '2024-09-01T00:00:00.000Z', time: '10:00', test: true },
+      { name: 'Kay', phone: '0987654321', date: '2024-10-01T00:00:00.000Z', time: '14:00', test: true }
     ]);
 
     const response = await request(app)
@@ -121,7 +121,7 @@ it('should return 404 for non-existing booking on GET /api/bookings/:name', asyn
   // Test for PUT /api/bookings/:name
   it('should update the specific booking on PUT /api/bookings/:name', async function () {
     const booking = new Booking({
-      name: 'John Doe',
+      name: 'Kay',
       phone: '1234567890',
       date: '2024-09-01T00:00:00.000Z',
       time: '10:00',
@@ -130,7 +130,7 @@ it('should return 404 for non-existing booking on GET /api/bookings/:name', asyn
     await booking.save();
 
     const updatedBooking = {
-      name: 'John Doe',
+      name: 'Kay',
       phone: '9876543210',
       date: '2024-09-02T00:00:00.000Z',
       time: '11:00'
