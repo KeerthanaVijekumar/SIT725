@@ -1,0 +1,18 @@
+{
+  "scripts": {
+    "start": "node server.js",
+    "test": "mocha"
+  },
+  "dependencies": {
+    "all": "^0.0.0",
+    "body-parser": "^1.20.2",
+    "chai": "^4.2.0",
+    "express": "^4.19.2",
+    "mocha": "^10.7.3",
+    "mongoose": "^8.5.3"
+  },
+  "devDependencies": {
+    "sinon": "^18.0.0",
+    "supertest": "^7.0.0"
+  }
+}
