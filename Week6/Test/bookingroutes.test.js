@@ -224,22 +224,4 @@ it('should return 400 for invalid booking name', async function () {
     // Assert
     expect(response.body.error).to.equal('Invalid booking name');
 });
-
-//   // Test for sorting bookings by date
-// it('should sort bookings by date on GET /api/bookings?sort=date', async function () {
-//     await Booking.insertMany([
-//         { name: 'John Doe', phone: '1234567890', date: '2024-09-01T00:00:00.000Z', time: '10:00', test: true },
-//         { name: 'Jane Doe', phone: '0987654321', date: '2024-10-01T00:00:00.000Z', time: '14:00', test: true }
-//     ]);
-
-//     const response = await request(app)
-//         .get('/api/bookings?sort=date')
-//         .expect(200);
-
-//     const bookings = response.body;
-//     expect(bookings.length).to.equal(2);
-//     expect(new Date(bookings[0].date) <= new Date(bookings[1].date)).to.be.true; // Check if bookings are sorted by date
-// });
-
-
 });

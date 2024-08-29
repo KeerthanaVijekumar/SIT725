@@ -53,32 +53,7 @@ describe('Booking Controller', () => {
         };
 
         expect(response.body).to.deep.include(expectedResponse);
-    });
-    
-    // it('should handle errors and return status 500', async function() {
-    //     sinon.stub(Booking.prototype, 'save').rejects(new Error('Failed to save booking'));
-    
-    //     try {
-    //         const response = await request(app)
-    //             .post('/api/bookings')
-    //             .send({
-    //                 name: 'John Doe',
-    //                 phone: '1234567890',
-    //                 date: '2024-09-01',
-    //                 time: '10:00'
-    //             })
-    //             .expect(500);
-    
-    //         console.log('Response Body:', response.body); // Log response for debugging
-    //         expect(response.body.error).to.equal('Failed to save booking');
-    //     } catch (error) {
-    //         console.error('Test Error:', error);
-    //         throw error; // Re-throw to ensure test fails
-    //     } finally {
-    //         Booking.prototype.save.restore(); // Ensure method is restored
-    //     }
-    // });
-    
+    });    
 });
 
 
