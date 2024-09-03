@@ -7,8 +7,12 @@ const path = require('path');
 const bookingController = require('./Controllers/bookingcontroller');
 const webRoutes = require('./Routes/webroutes'); // Import static file routes
 const apiRoutes = require('./Routes/apiroutes'); // Import API routes
+const http = require('http');
+const socketIo = require('socket.io');
 
 const app = express();
+const server = http.createServer(app); // Create an HTTP server
+const io = socketIo(server); // Attach socket.io to the server
 const port = 3040;
 
 // Middleware
@@ -22,6 +26,18 @@ app.use(express.static(path.join(__dirname, 'Views')));
 app.use('/', webRoutes); // Serve static file routes
 app.use('/api', apiRoutes); // Serve API routes
 
+// Socket.io setup
+io.on('connection', (socket) => {
+  console.log('A user connected');
+  
+  // Example: Emit a message to the connected client
+  socket.emit('message', 'Welcome to the PawFinders Service Booking!');
+  
+  // Handle disconnection
+  socket.on('disconnect', () => {
+    console.log('User disconnected');
+  });
+});
 
 // Connect to MongoDB
 const runServer = async () => {
@@ -45,7 +61,7 @@ const runServer = async () => {
       testConnection(); // Call the test function
     });
 
-    app.listen(port, () => {
+    server.listen(port, () => {
       console.log(`Server listening on port ${port}`);
     });
   } catch (error) {
